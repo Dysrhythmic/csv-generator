@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
   if (file_write_count != str_write_count) {
     printf("[!]ERROR: Failed to create write field\n");
     printf("[*]file_write_count: %lu\n", file_write_count);
-    printf("[*]chars_to_write: %lu\n", str_write_count);
+    printf("[*]str_write_count: %lu\n", str_write_count);
     fclose(csv);
     return 1;
   }
