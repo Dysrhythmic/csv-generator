@@ -1,3 +1,9 @@
+/**
+* @author Jacob Tucker
+*
+* For generating CSV files of a given size for testing.
+* */
+
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -8,17 +14,17 @@ int main(int argc, char** argv) {
   
   if (argc == 4) {
     filepath = argv[1];
-    record_count = atoi(argv[2]);
-    field_count = atoi(argv[3]);
+    field_count = atoi(argv[2]);
+    record_count = atoi(argv[3]);
   }
   else {
-    printf("[*]Usage is: %s <filepath> <num_of_rows> <num_of_columns>\n", argv[0]);
+    printf("[*]Usage is: %s <filepath> <num_of_columns> <num_of_rows>\n", argv[0]);
     return 1;
   }
 
   FILE* csv = fopen(filepath, "w");
   if (csv == NULL) {
-    printf("[!]ERROR: Unable to open file %s for reading\n", filepath);
+    printf("[!]ERROR: Unable to open file %s for writing\n", filepath);
     return 1;
   }
 
